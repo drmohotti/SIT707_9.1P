@@ -6,13 +6,14 @@ import java.util.List;
 
 public class TaskServiceTest {
 
-	@Test
-	public void testTasksForStudent101() {
-	    TaskService service = new TaskService();
-	    List<String> tasks = service.getTasksByStudentId(101);
-	    assertEquals(2, tasks.size()); // restore correct value
-	}
-
+    @Test
+    public void testTasksForStudent101() {
+        TaskService service = new TaskService();
+        List<String> tasks = service.getTasksByStudentId(101);
+        assertEquals(2, tasks.size());
+        assertTrue(tasks.contains("Task 1"));
+        assertTrue(tasks.contains("Task 2"));
+    }
 
     @Test
     public void testTasksForStudent102() {
