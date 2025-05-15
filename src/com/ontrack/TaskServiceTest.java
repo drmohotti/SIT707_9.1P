@@ -10,7 +10,7 @@ public class TaskServiceTest {
 	public void testTasksForStudent101() {
 	    TaskService service = new TaskService();
 	    List<String> tasks = service.getTasksByStudentId(101);
-	    assertEquals(99, tasks.size()); // wrong on purpose
+	    assertEquals(2, tasks.size()); // restore correct value
 	}
 
 
